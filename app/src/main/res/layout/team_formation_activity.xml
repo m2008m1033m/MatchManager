@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ccc"
+            android:padding="16dp"
+            android:text="@string/major_players"
+            android:textColor="#000"
+            android:textStyle="bold"
+            />
+
+        <com.dxbcom.matchmanager.customViews.TableLayoutWithRadioButton
+            android:id="@+id/major_players"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16sp"
+            android:stretchColumns="*"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ccc"
+            android:padding="16dp"
+            android:text="@string/secondary_players"
+            android:textColor="#000"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:id="@+id/secondary_players"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16sp"/>
+
+        <Button
+            android:id="@+id/confirm_formation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="Confirm Formation"/>
+
+    </LinearLayout>
+
+</ScrollView>
