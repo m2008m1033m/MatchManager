@@ -1,3 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="/Users/mohammed/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/24.0.0/2943c74db6d4346ab8c6531adac91fa05c137c40/support-annotations-24.0.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.0.0_51ca819d14ee474e0f93457918997bd5798e48f7/classes.dex" />
+    </item>
+    <item
+        jar="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="aa7abb726f31ebafa66a946c35ef58bc9768e598">
+        <dex dex="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_8318fc061304f37fedc49b0142fe27bac6dad97e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_45fe9c1aa5fdf9d2ef7ad7911a106e5da5487b05/classes.dex" />
+    </item>
+    <item
+        jar="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="8dd49930e4f9dde1a42d37e362b9fea8b1b69c0d">
+        <dex dex="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-24.0.0_83bc5a7ea349800894e503475e745fea89b22f3c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/exploded-aar/com.android.support/design/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="fc29308a7a8f6d4407b34634eb48fb8b817f9b23">
+        <dex dex="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.0.0_eec939c8bebad8d1a9b28d059643fb40af4b47b1/classes.dex" />
+    </item>
+    <item
+        jar="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="55446bab9e886a4f57b329ee9b5689e11a0f5c00">
+        <dex dex="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6271bcc6ad98f79bacf75a7625af742abf85f0ac/classes.dex" />
+    </item>
+    <item
+        jar="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
+        <dex dex="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.0.0_4acaba3d89359cb5b1162ca7a2ac5b9ea2253b82/classes.dex" />
+    </item>
+    <item
+        jar="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="894922f67adeaaef51f077a29e315da21a3382d3">
+        <dex dex="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.0.0_cbcec36a8f2538805017cf0376e0a33c93453f85/classes.dex" />
+    </item>
+    <item
+        jar="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.0.0_af98a53fddb5b22c2c0d99db3f8bd6cf710e1424/classes.dex" />
+    </item>
+    <item
+        jar="/Users/mohammed/.gradle/caches/modules-2/files-2.1/cz.msebera.android/httpclient/4.3.6/526a9f794eab830eae4f23a62c572878b3f491ab/httpclient-4.3.6.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
+        <dex dex="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/httpclient-4.3.6_4c44bb21fa180b1306c667f3f9e7176f12410e3b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
+        <dex dex="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.0.0_5fef46ea2ba5bb6a21bd4adfbd83c2db3bb81abc/classes.dex" />
+    </item>
+    <item
+        jar="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
+        <dex dex="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.0.0_9c05849018a851df4ac1dc3a011b02bf7d74bbfe/classes.dex" />
+    </item>
+    <item
+        jar="/Users/mohammed/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_a63ac89ccb3d1c1098c96ed7528234932382aec9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/mohammed/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.9/386a4339ffe52d5d63e80f9bed8d2b1d1a418249/android-async-http-1.4.9.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="386a4339ffe52d5d63e80f9bed8d2b1d1a418249">
+        <dex dex="/Users/mohammed/Documents/Android Projects/MatchManager/app/build/intermediates/transforms/dex/debug/folders/1000/10/android-async-http-1.4.9_f8aaf14c4d70a1ac968ed9c6830012bf49f73a55/classes.dex" />
+    </item>
+
+</items>

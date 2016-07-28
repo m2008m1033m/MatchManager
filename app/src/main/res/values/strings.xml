@@ -73,4 +73,6 @@
     <string name="match_hosted_locally">Match hosted locally?</string>
     <string name="club_colon">Club:</string>
     <string name="match_half">Match Half</string>
+    <string name="change_with_colon">Change with:</string>
+    <string name="old_and_new_players_cannot_be_the_same">Old and new players cannot be the same.</string>
 </resources>

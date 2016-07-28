@@ -131,7 +131,7 @@ public class MatchesApis {
         }, params, "matches_events");
     }
 
-    public static void createEvent(@Nullable String clubId, String matchId, String eventType, String matchHalf, @Nullable String playerId, @Nullable String playerName, @Nullable String playerNumber, String minute, @Nullable String notes, ApiListeners.OnActionExecutedListener listener) {
+    public static void createEvent(@Nullable String clubId, String matchId, String eventType, String matchHalf, @Nullable String playerId, @Nullable String newPlayerId, @Nullable String playerName, @Nullable String playerNumber, String minute, @Nullable String notes, ApiListeners.OnActionExecutedListener listener) {
 
         RequestParams params = new RequestParams();
         if (clubId != null) params.put("clubId", clubId);
@@ -139,6 +139,7 @@ public class MatchesApis {
         params.put("matchId", matchId);
         params.put("matchHalfID", matchHalf);
         if (playerId != null) params.put("playerId", playerId);
+        if (newPlayerId != null) params.put("newPlayerId", newPlayerId);
         if (playerName != null) params.put("playerName", playerName);
         if (playerNumber != null) params.put("playerNumber", playerNumber);
         params.put("minute", minute);

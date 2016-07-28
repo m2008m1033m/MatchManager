@@ -43,8 +43,10 @@ public class CreateEventActivity extends AppCompatActivity {
     private LinearLayout mTeamContainer;
     private LinearLayout mPlayerSpinnerText;
     private LinearLayout mPlayerEditEdit;
+    private LinearLayout mChangePlayerSection;
     private Spinner mClubs;
     private Spinner mPlayersNames;
+    private Spinner mChangePlayerSpinner;
     private EditText mPlayerName;
     private EditText mPlayerNumberEdit;
     private TextView mMinute;
@@ -92,7 +94,7 @@ public class CreateEventActivity extends AppCompatActivity {
          */
         loadPlayers();
 
-        showAllFields(mEventType.equals("goal"));
+        refreshFieldsBasedOnEvent();
 
         /**
          * events
@@ -103,12 +105,19 @@ public class CreateEventActivity extends AppCompatActivity {
                 if (!areFieldsValid()) return;
                 String clubId = mEventType.equals("goal") ? ((Club) mClubs.getSelectedItem()).getId() : null;
                 String playerId = mIsLocalTeam ? ((Player) mPlayersNames.getSelectedItem()).getId() : null;
-                String matchHalfId =((MatchHalf) mMatchHalfSpinner.getSelectedItem()).getId();
+                String newPlayerId = mEventType.equals("change") ? ((Player) mChangePlayerSpinner.getSelectedItem()).getId() : null;
+                String matchHalfId = ((MatchHalf) mMatchHalfSpinner.getSelectedItem()).getId();
                 String playerName = mIsLocalTeam ? null : mPlayerName.getText().toString();
                 String playerNumber = mIsLocalTeam ? null : mPlayerNumberEdit.getText().toString();
                 String minute = mMinute.getText().toString();
                 String notes = mNotes.getText().toString().trim().isEmpty() ? null : mNotes.getText().toString().trim();
-                MatchesApis.createEvent(clubId, mMatchId, mEventType, matchHalfId, playerId, playerName, playerNumber, minute, notes, new ApiListeners.OnActionExecutedListener() {
+
+                if (newPlayerId != null && newPlayerId.equals(playerId)) {
+                    Notifications.showAlertDialog(CreateEventActivity.this, getString(R.string.error), getString(R.string.old_and_new_players_cannot_be_the_same));
+                    return;
+                }
+
+                MatchesApis.createEvent(clubId, mMatchId, mEventType, matchHalfId, playerId, newPlayerId, playerName, playerNumber, minute, notes, new ApiListeners.OnActionExecutedListener() {
                     @Override
                     public void onExecuted(Result result) {
                         if (result.isSucceeded()) {
@@ -139,8 +148,10 @@ public class CreateEventActivity extends AppCompatActivity {
         mTeamContainer = ((LinearLayout) findViewById(R.id.team_container));
         mPlayerSpinnerText = ((LinearLayout) findViewById(R.id.player_spinner_text));
         mPlayerEditEdit = ((LinearLayout) findViewById(R.id.player_edit_edit));
+        mChangePlayerSection = ((LinearLayout) findViewById(R.id.change_player_section));
         mClubs = ((Spinner) findViewById(R.id.club));
         mPlayersNames = ((Spinner) findViewById(R.id.player_spinner));
+        mChangePlayerSpinner = ((Spinner) findViewById(R.id.player_change_spinner));
         mMatchHalfSpinner = ((Spinner) findViewById(R.id.match_half_spinner));
         mPlayerName = ((EditText) findViewById(R.id.player_edit));
         mPlayerNumberEdit = ((EditText) findViewById(R.id.player_number_edit));
@@ -156,8 +167,10 @@ public class CreateEventActivity extends AppCompatActivity {
             public void onLoaded(Result result, @Nullable ArrayList<Model> items) {
                 if (result.isSucceeded() && items != null) {
                     ArrayAdapter adapter = new PlayersSpinnerAdapter(CreateEventActivity.this, R.layout.player_item, items);
-                    //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     mPlayersNames.setAdapter(adapter);
+
+                    adapter = new PlayersSpinnerAdapter(CreateEventActivity.this, R.layout.player_item, items);
+                    mChangePlayerSpinner.setAdapter(adapter);
                     loadMatchHalves();
                 } else {
                     Notifications.showYesNoDialog(CreateEventActivity.this, getString(R.string.error), result.getMessages().get(0), getString(R.string.retry), getString(R.string.cancel), new DialogInterface.OnClickListener() {
@@ -274,8 +287,9 @@ public class CreateEventActivity extends AppCompatActivity {
         return true;
     }
 
-    private void showAllFields(boolean show) {
-        mTeamContainer.setVisibility(show ? View.VISIBLE : View.GONE);
+    private void refreshFieldsBasedOnEvent() {
+        mTeamContainer.setVisibility(mEventType.equals("goal") ? View.VISIBLE : View.GONE);
+        mChangePlayerSection.setVisibility(mEventType.equals("change") ? View.VISIBLE : View.GONE);
     }
 
     private void showProgress(boolean show) {
