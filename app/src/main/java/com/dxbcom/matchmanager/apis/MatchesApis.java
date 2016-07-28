@@ -137,7 +137,7 @@ public class MatchesApis {
         if (clubId != null) params.put("clubId", clubId);
         params.put("eventType", eventType);
         params.put("matchId", matchId);
-        params.put("matchHalf", matchHalf);
+        params.put("matchHalfID", matchHalf);
         if (playerId != null) params.put("playerId", playerId);
         if (playerName != null) params.put("playerName", playerName);
         if (playerNumber != null) params.put("playerNumber", playerNumber);

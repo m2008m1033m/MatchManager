@@ -22,7 +22,7 @@ public class Event extends Model {
     }
 
     private String mPlayerName;
-    private String mTeamId;
+    private String mClubId;
     private int mPlayerNumber;
     private Type mType;
     private int mMinute;
@@ -37,7 +37,7 @@ public class Event extends Model {
     public Event(JSONObject jsonObject) {
         setId(JSONUtils.getString(jsonObject, "id", ""));
         setPlayerName(JSONUtils.getString(jsonObject, "playerName", ""));
-        setTeamId(JSONUtils.getString(jsonObject, "teamId", ""));
+        setClubId(JSONUtils.getString(jsonObject, "clubId", ""));
         setPlayerNumber(JSONUtils.getInt(jsonObject, "playerNumber", 0));
         setType(JSONUtils.getString(jsonObject, "type", ""));
         setMinute(JSONUtils.getInt(jsonObject, "minute", 0));
@@ -63,12 +63,12 @@ public class Event extends Model {
         mPlayerNumber = playerNumber;
     }
 
-    public String getTeamId() {
-        return mTeamId;
+    public String getClubId() {
+        return mClubId;
     }
 
-    public void setTeamId(String teamId) {
-        mTeamId = teamId;
+    public void setClubId(String clubId) {
+        mClubId = clubId;
     }
 
     public Type getType() {

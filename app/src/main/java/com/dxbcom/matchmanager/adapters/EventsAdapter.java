@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.dxbcom.matchmanager.MatchManagerApplication;
 import com.dxbcom.matchmanager.R;
+import com.dxbcom.matchmanager.core.Communicator;
 import com.dxbcom.matchmanager.models.Event;
 import com.squareup.picasso.Picasso;
 
@@ -83,7 +84,7 @@ public class EventsAdapter extends RecyclerView.Adapter {
         if (event.getType() == Event.Type.GOAL) {
             ((ViewHolder) holder).mLogo.setVisibility(View.VISIBLE);
             Picasso.with(MatchManagerApplication.getContext())
-                    .load(R.drawable.logo) // TODO: team logo
+                    .load(Communicator.API_URL + "Services/logo/" + event.getClubId())
                     .placeholder(R.drawable.placeholder)
                     .into(((ViewHolder) holder).mLogo);
         } else {
